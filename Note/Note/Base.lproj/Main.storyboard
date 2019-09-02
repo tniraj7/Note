@@ -13,7 +13,7 @@
         <!--Note DetailVC-->
         <scene sceneID="eqp-eh-DaZ">
             <objects>
-                <viewController id="Au1-X6-3lb" customClass="NoteDetailVC" customModule="Note" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteDetailVC" id="Au1-X6-3lb" customClass="NoteDetailVC" customModule="Note" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GZD-5k-O9d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,9 @@
                                 <state key="normal" title="LOCK NOTE">
                                     <color key="titleColor" red="0.9278413955" green="0.7298734898" blue="0.13577007669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="lockButtonPressed:" destination="Au1-X6-3lb" eventType="touchUpInside" id="Na8-TT-5Ou"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,7 +52,6 @@
                         <viewLayoutGuide key="safeArea" id="NkF-EM-lKx"/>
                     </view>
                     <connections>
-                        <outlet property="lockNoteButton" destination="FiI-JK-cru" id="ckB-un-cfG"/>
                         <outlet property="textView" destination="hZU-wa-iCY" id="uY9-qD-yhB"/>
                     </connections>
                 </viewController>
@@ -121,6 +123,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Secure Notes" id="z7O-aH-Iz4">
+                        <barButtonItem key="backBarButtonItem" title="back" id="y6i-YM-9Z1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SBE-o0-jex">
                             <color key="tintColor" red="0.9278413955" green="0.7298734898" blue="0.13577007669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
@@ -141,6 +144,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lTX-4F-0Z7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.9278413955" green="0.7298734898" blue="0.13577007669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.9278413955479452" green="0.72987348984246569" blue="0.13577007672876709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
