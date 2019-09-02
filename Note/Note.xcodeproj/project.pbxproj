@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34A393DC231CB7A30034848A /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A393DB231CB7A30034848A /* NoteTableViewCell.swift */; };
 		34C1E645231C952200F86476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1E644231C952200F86476 /* AppDelegate.swift */; };
 		34C1E647231C952200F86476 /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1E646231C952200F86476 /* NoteVC.swift */; };
 		34C1E64A231C952200F86476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C1E648231C952200F86476 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34A393DB231CB7A30034848A /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		34C1E641231C952200F86476 /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C1E644231C952200F86476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C1E646231C952200F86476 /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		34C1E665231C955700F86476 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				34A393DB231CB7A30034848A /* NoteTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				34C1E647231C952200F86476 /* NoteVC.swift in Sources */,
 				34C1E645231C952200F86476 /* AppDelegate.swift in Sources */,
 				34C1E66A231C9C0900F86476 /* Note.swift in Sources */,
+				34A393DC231CB7A30034848A /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
