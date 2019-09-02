@@ -13,6 +13,9 @@
 		34C1E64C231C952200F86476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C1E64B231C952200F86476 /* Assets.xcassets */; };
 		34C1E64F231C952200F86476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C1E64D231C952200F86476 /* LaunchScreen.storyboard */; };
 		34C1E65A231C952300F86476 /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1E659231C952300F86476 /* NoteTests.swift */; };
+		34C1E66A231C9C0900F86476 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1E669231C9C0900F86476 /* Note.swift */; };
+		34C7F170231C9E1C0097ECD0 /* LockStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C7F16F231C9E1C0097ECD0 /* LockStatus.swift */; };
+		34C7F172231C9E580097ECD0 /* NoteObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C7F171231C9E580097ECD0 /* NoteObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		34C1E655231C952300F86476 /* NoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C1E659231C952300F86476 /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
 		34C1E65B231C952300F86476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C1E669231C9C0900F86476 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		34C7F16F231C9E1C0097ECD0 /* LockStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockStatus.swift; sourceTree = "<group>"; };
+		34C7F171231C9E580097ECD0 /* NoteObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		34C1E664231C955200F86476 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				34C1E669231C9C0900F86476 /* Note.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 		34C1E667231C956400F86476 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				34C7F16F231C9E1C0097ECD0 /* LockStatus.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 		34C1E668231C956B00F86476 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				34C7F171231C9E580097ECD0 /* NoteObjects.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -237,8 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C7F172231C9E580097ECD0 /* NoteObjects.swift in Sources */,
+				34C7F170231C9E1C0097ECD0 /* LockStatus.swift in Sources */,
 				34C1E647231C952200F86476 /* NoteVC.swift in Sources */,
 				34C1E645231C952200F86476 /* AppDelegate.swift in Sources */,
+				34C1E66A231C9C0900F86476 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
