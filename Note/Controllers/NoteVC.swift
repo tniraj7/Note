@@ -62,7 +62,7 @@ class NoteVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let localizedReasonString = "This app uses Face ID / Touch ID to secure your notes."
         var authError: NSError?
         
-        if #available(iOS 8.0, iOSMac 10.12.1, *) {
+        if #available(iOS 8.0, macCatalyst 10.12.1, *) {
             if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: localizedReasonString) { (success, evaluateError) in
                     if success {
