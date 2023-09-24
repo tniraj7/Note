@@ -10,25 +10,22 @@ class BiometricAuthenticationManager {
         return authenticationContext.canEvaluatePolicy(policy, error: nil)
     }
     
-    @MainActor func authenticateBiometrics(
-        policy: LAPolicy,
-        completion: @escaping (Bool) -> Void
-    ) {
+    @MainActor func authenticateBiometrics(policy: LAPolicy) async -> Bool {
         guard isBiometricAuthenticationPossible(policy: policy) else {
-            completion(false)
-            return
+            return false
         }
         
-        authenticationContext
-            .evaluatePolicy(
+        do {
+            let result = try await authenticationContext.evaluatePolicy(
                 policy,
-                localizedReason: localizedReasonString
-            ) { (success, evaluateError) in
-            if success {
-                completion(true)
+                localizedReason: localizedReasonString)
+            if result {
+                return true
             } else {
-                completion(false)
+                return false
             }
+        } catch {
+            return false
         }
     }
     
