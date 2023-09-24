@@ -4,7 +4,7 @@ import LocalAuthentication
 class BiometricAuthenticationManager {
     
     internal var authenticationContext = LAContext()
-    let localizedReasonString = "This app uses Face ID / Touch ID to secure your notes."
+    private let localizedReasonString = "This app uses Face ID / Touch ID to secure your notes."
     
     func isBiometricAuthenticationPossible(policy: LAPolicy) -> Bool {
         return authenticationContext.canEvaluatePolicy(policy, error: nil)
