@@ -1,9 +1,19 @@
 import UIKit
-import LocalAuthentication
 
-class NoteVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NotesListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    private let biometricAuthenticationManager: BiometricAuthenticationManager
+    
+    required init?(coder: NSCoder) {
+        fatalError("Failed to initialize an instance")
+    }
+    
+    init?(coder: NSCoder,
+                     biometricAuthenticationManager: BiometricAuthenticationManager) {
+        self.biometricAuthenticationManager = biometricAuthenticationManager
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +46,8 @@ class NoteVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if notesArray[indexPath.row].lockStatus == .locked {
-            authenticateBiometrics { (authenticated) in
+            biometricAuthenticationManager.authenticateBiometrics(policy: .deviceOwnerAuthenticationWithBiometrics
+            ) { (authenticated) in
                 if authenticated {
                     let lockStatus = notesArray[indexPath.row].lockStatus
                     notesArray[indexPath.row].lockStatus = lockStatusFlipper(lockStatus)
@@ -57,39 +68,11 @@ class NoteVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(noteDetailVC, animated: true)
     }
     
-    func authenticateBiometrics(completion: @escaping (Bool) -> Void) {
-        let context = LAContext()
-        let localizedReasonString = "This app uses Face ID / Touch ID to secure your notes."
-        var authError: NSError?
-        
-        if #available(iOS 8.0, macCatalyst 10.12.1, *) {
-            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
-                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: localizedReasonString) { (success, evaluateError) in
-                    if success {
-                        completion(true)
-                    } else {
-                        guard let errorString = evaluateError?.localizedDescription else { return }
-                        self.showAlert(withMessage: errorString)
-                        completion(false)
-                        
-                    }
-                }
-            } else {
-                guard let authErrorString = authError?.localizedDescription else { return }
-                showAlert(withMessage: authErrorString)
-                completion(false)
-            }
-        } else {
-            completion(false)
-        }
-    }
-    
     func showAlert(withMessage message: String) {
         let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertVC.addAction(action)
         present(alertVC, animated: true, completion:  nil)
     }
-    
 }
 

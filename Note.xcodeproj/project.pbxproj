@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34519E2C2AC02F27008DFB9E /* BiometricAuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34519E2B2AC02F27008DFB9E /* BiometricAuthenticationManager.swift */; };
 		34A393DC231CB7A30034848A /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A393DB231CB7A30034848A /* NoteTableViewCell.swift */; };
 		34C1E645231C952200F86476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1E644231C952200F86476 /* AppDelegate.swift */; };
-		34C1E647231C952200F86476 /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1E646231C952200F86476 /* NoteVC.swift */; };
+		34C1E647231C952200F86476 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1E646231C952200F86476 /* NotesListViewController.swift */; };
 		34C1E64A231C952200F86476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C1E648231C952200F86476 /* Main.storyboard */; };
 		34C1E64C231C952200F86476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C1E64B231C952200F86476 /* Assets.xcassets */; };
 		34C1E64F231C952200F86476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C1E64D231C952200F86476 /* LaunchScreen.storyboard */; };
@@ -32,10 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34519E2B2AC02F27008DFB9E /* BiometricAuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationManager.swift; sourceTree = "<group>"; };
 		34A393DB231CB7A30034848A /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		34C1E641231C952200F86476 /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C1E644231C952200F86476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34C1E646231C952200F86476 /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
+		34C1E646231C952200F86476 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
 		34C1E649231C952200F86476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34C1E64B231C952200F86476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34C1E64E231C952200F86476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,7 +133,7 @@
 		34C1E666231C955C00F86476 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				34C1E646231C952200F86476 /* NoteVC.swift */,
+				34C1E646231C952200F86476 /* NotesListViewController.swift */,
 				34EEC2BF231CE2C30022037A /* NoteDetailVC.swift */,
 			);
 			path = Controllers;
@@ -150,6 +152,7 @@
 			children = (
 				34C7F171231C9E580097ECD0 /* NoteObjects.swift */,
 				34EEC2C1231CE6150022037A /* Helper.swift */,
+				34519E2B2AC02F27008DFB9E /* BiometricAuthenticationManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -259,9 +262,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C7F172231C9E580097ECD0 /* NoteObjects.swift in Sources */,
+				34519E2C2AC02F27008DFB9E /* BiometricAuthenticationManager.swift in Sources */,
 				34EEC2C0231CE2C30022037A /* NoteDetailVC.swift in Sources */,
 				34C7F170231C9E1C0097ECD0 /* LockStatus.swift in Sources */,
-				34C1E647231C952200F86476 /* NoteVC.swift in Sources */,
+				34C1E647231C952200F86476 /* NotesListViewController.swift in Sources */,
 				34C1E645231C952200F86476 /* AppDelegate.swift in Sources */,
 				34C1E66A231C9C0900F86476 /* Note.swift in Sources */,
 				34A393DC231CB7A30034848A /* NoteTableViewCell.swift in Sources */,
