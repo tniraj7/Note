@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             guard let self = self else { return }
             if notesArray[indexPath.row].lockStatus == .locked {
                 Task {
-                    let authResult = await biometricAuthenticationManager
+                    let authResult = try await biometricAuthenticationManager
                         .authenticateBiometrics(policy: .deviceOwnerAuthenticationWithBiometrics)
                      
                      if authResult {
